@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 class BaseComp
 {
@@ -32,7 +31,8 @@ public:
     }
     void show()
     {
-        cout<<real<<" + "<<imag<<"i\n";
+        cout<<real<<" + ";
+        cout<<imag<<"i\n";
     }
     friend class DerB;
 };
@@ -41,9 +41,7 @@ class DerB:public BaseComp
 public:
     DerB(float r,float i):BaseComp(r,i)
     {
-
     }
-
     void diff(DerA com1)
     {
         real-=com1.real;
@@ -51,16 +49,17 @@ public:
     }
     void show()
     {
-        cout<<real<<" + "<<imag<<"i\n";
+        cout<<real<<" + ";
+        cout<<imag<<"i\n";
     }
 };
 int main()
 {
-
     DerA a(5,7,8,9);
     DerB b(20,20);
     a.addWithBase();
     a.show();
     b.diff(a);
     b.show();
+    return 0;
 }

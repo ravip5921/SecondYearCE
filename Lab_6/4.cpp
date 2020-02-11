@@ -22,7 +22,7 @@ public:
     }
     void showinfo()
     {
-        cout<<name<<endl<<age<<endl;
+        cout<<"Name = "<<name<<endl<<"Age ="<<age<<endl;
     }
     void id()
     {
@@ -82,15 +82,14 @@ public:
         Person::showinfo();
         cout<<"Post of "<<Person::name<< " is "<<post<<endl;
     }
-    /*void id()
+    void id()
     {
-        cout<<"Base class i.e.";
-        Person::id();
         cout<<obj_name<<"'s address="<<this<<endl;
-    }*/
+    }
 };
 int main()
 {
+    Person p1("Base1"),p2("Base2");
     Student s1("s1","p1"),s2("s2","p2");
     Employee e1("e1","p3"),e2("e2","p4");
 
@@ -99,6 +98,13 @@ int main()
     e1.getinfo();
     e2.getinfo();
 
+    s1.showinfo();
+    s2.showinfo();
+    e1.showinfo();
+    e2.showinfo();
+
+    p1.id();
+    p2.id();
     s1.id();
     s2.id();
     e1.id();
