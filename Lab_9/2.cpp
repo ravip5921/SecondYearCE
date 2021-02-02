@@ -13,7 +13,8 @@ public:
 };
 
 template<typename T>
-queue<T>::queue(T arr[],int s):size(s){
+queue<T>::queue(T arr[],int s):size(s)
+{
     ptr= new T[s];
     for(int i=0;i<s;i++)
     {
@@ -22,14 +23,17 @@ queue<T>::queue(T arr[],int s):size(s){
 }
 
 template<typename T>
-void queue<T>::print(){
-    for(int i=0;i<size;i++){
+void queue<T>::print()
+{
+    for(int i=0;i<size;i++)
+    {
         std::cout<<" "<<*(ptr+i);
     }
  std::cout<<std::endl;
 }
 
-int main(){
+int main()
+{
     int s=5;
 
     //for integer
